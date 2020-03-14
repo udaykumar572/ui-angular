@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+
+  <br><br>
+
+<h2 class="text-center">Welcome User</h2>
+
+<div class="container">
+	<div class="row">
+    	<div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-bar-chart"></i></div>
+					<div class="info">
+						<h3 class="title">Compare Company/Sector</h3>
+						<p>
+              Here User can compare Companies and Stocks thereby the users can see the results in th form of Graphs 
+            </p>
+						<div class="more">
+							<a routerLink="/comparecompany">
+								Compare <i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-building"></i></div>
+					<div class="info">
+						<h3 class="title">Ipos</h3>
+    					<p>
+						  Here User can see the	List of Ipos present in the Ipos which are being available.<br>
+						</p>
+						<div class="more">
+							<a routerLink="/ipos">
+								Ipos<i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>
+			
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+			<div class="box">							
+				<div class="icon">
+					<div class="image"><i class="fa fa-desktop"></i></div>
+					<div class="info">
+						<h3 class="title">Others</h3>
+    					<p>
+							Other Information about the stock Market and the current Stocks etc...,
+						</p>
+						<div class="more">
+							<a routerLink="/others">
+								Read More <i class="fa fa-angle-double-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="space"></div>
+			</div> 
+		</div>		    
+		<!-- /Boxes de Acoes -->
+	</div>
+</div>
+</body>
+</html>
+<router-outlet></router-outlet>

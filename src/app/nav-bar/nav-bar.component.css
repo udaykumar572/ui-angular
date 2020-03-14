@@ -1,0 +1,17 @@
+ .text-center{
+    background-image: url(https://payload.cargocollective.com/1/8/270313/8807453/ECP_VV_Business_12fps.gif);
+}  
+
+        .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+}
+.text-center {
+    position: relative;
+    min-height: 30px;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+}
+      

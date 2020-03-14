@@ -1,0 +1,63 @@
+<app-adminnavbar></app-adminnavbar>
+<div class="panel panel-default">
+
+    <div class="panel-body">
+  
+      <table class="table table-hover table-sm" >
+  
+        <thead class="thead-light">
+  
+          <tr>
+            <th></th>
+            <th>Id</th>
+
+            
+            <th>UserName</th>
+  
+            <th>Password</th>
+
+            
+  
+            <th>Email</th>
+  
+            <th>Mobile</th>
+  
+            <th>Action</th>
+  
+  
+          </tr>
+  
+        </thead>
+  
+        <tbody>
+  
+           <tr *ngFor="let user of userList ">
+               <td></td>
+               
+            <td>{{user.id}}</td>
+  
+            <td>{{user.username}}</td>
+  
+            <td>{{user.password}}</td>
+  
+            <td>{{user.email}}</td>
+  
+            <td>{{user.mobile}}</td>
+  
+              
+            <td><button (click)="deleteUser(user)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+              <button (click)="updateUser(user)" class='btn btn-info'
+         
+              data-toggle="modal" data-target="#myModal">Update</button>
+  
+  
+           </tr>
+  
+        </tbody><br>
+  
+      </table>
+  
+    </div>
+  
+  </div>

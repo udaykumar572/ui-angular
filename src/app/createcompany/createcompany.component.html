@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+<title>Rgistration</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+body {
+   
+   background-image: url("https://www.tasgroup.eu/media/media-room-2019/en/sftrjpg.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 1000px;
+
+ }
+
+ .form-control, .form-control:focus, .input-group-addon {
+
+ border-color: #e1e1e1;
+
+ }
+
+  .form-control, .btn {
+
+    border-radius: 3px;
+
+  }
+
+ .signup-form {
+
+ width: 390px;
+
+ margin: 0 auto;
+
+ padding: 30px 0;
+
+ }
+
+  .signup-form form {
+
+ color: #999;
+
+ border-radius: 3px;
+
+   margin-bottom: 15px;
+
+    background: #fff;
+
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+    padding: 30px;
+
+  }
+
+ .signup-form h2 {
+
+ color: #333;
+
+ font-weight: bold;
+
+    margin-top: 0;
+
+  }
+
+  .signup-form hr {
+
+    margin: 0 -30px 20px;
+
+  }
+
+ .signup-form .form-group {
+
+ margin-bottom: 20px;
+
+ }
+
+ .signup-form label {
+
+ font-weight: normal;
+
+ font-size: 13px;
+
+ }
+
+ .signup-form .form-control {
+
+ min-height: 38px;
+
+ box-shadow: none !important;
+
+ }
+
+ .signup-form .input-group-addon {
+
+ max-width: 42px;
+
+ text-align: center;
+
+ }
+
+ .signup-form input[type="checkbox"] {
+
+ margin-top: 2px;
+
+ }
+
+  .signup-form .btn{
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+ background: #19aa8d;
+
+ border: none;
+
+ min-width: 140px;
+
+  }
+
+ .signup-form .btn:hover, .signup-form .btn:focus {
+
+ background: #179b81;
+
+    outline: none;
+
+ }
+
+ .signup-form a {
+
+ color: #fff;
+
+ text-decoration: underline;
+
+ }
+
+ .signup-form a:hover {
+
+ text-decoration: none;
+
+ }
+
+ .signup-form form a {
+
+ color: #19aa8d;
+
+ text-decoration: none;
+
+ }
+
+ .signup-form form a:hover {
+
+ text-decoration: underline;
+
+ }
+
+ .signup-form .fa {
+
+ font-size: 21px;
+
+ }
+
+ .signup-form .fa-paper-plane {
+
+ font-size: 18px;
+
+ }
+
+ .signup-form .fa-check {
+
+ color: #fff;
+
+ left: 17px;
+
+ top: 18px;
+
+ font-size: 7px;
+
+ position: absolute;
+
+ }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="signup-form">
+
+ <div [hidden]="submitted" style="width: 400px;">
+
+ <form [formGroup]="companysaveform" #saveCompany1 (ngSubmit)="saveCompany(saveCompany1)">
+
+ <h2>NEW COMPANY</h2>
+
+ <p>Please fill in this form to create a New Company!</p>
+
+ <hr>
+
+ 
+    <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-building"></i></span>
+
+  <input type="text" class="form-control" formControlName="companyname" placeholder="Companyname" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Companyname.touched) && (Companyname.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Companyname.errors.required">Company Name is Required</span>
+
+          <span *ngIf = "Companyname.errors.minlength">
+
+            MinLength Error
+
+          </span>
+
+        </div>
+
+  </div>
+
+ </div>
+ <div class="form-group">
+
+    <div class="input-group">
+  
+    <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+  
+    <input type="number" class="form-control" formControlName="turnover" placeholder="Turnover" required="required">
+  
+    <div class="alert alert-danger" *ngIf = "(Turnover.touched)&&(Turnover.invalid)"
+  
+          style="margin-top: 5px;">
+  
+     <span *ngIf="Turnover.errors.required">Turnover is Required</span>
+  
+    </div>
+  
+    </div>
+  
+   </div>
+
+    <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+
+  <input type="text" class="form-control" formControlName="ceo" placeholder="Ceo" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Ceo.touched) && (Ceo.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Ceo.errors.required">Ceo is Required</span>
+
+          <span *ngIf = "Ceo.errors.minlength">
+
+            Mandatory!!
+
+          </span>
+
+        </div>
+
+  </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <div class="input-group">
+      
+        <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+      
+        <input type="text" class="form-control" formControlName="boardofdirectors" placeholder="Boardofdirectors" required="required">
+      
+        <div class="alert alert-danger" *ngIf = "(Boardofdirectors.touched) && (Boardofdirectors.invalid)"
+      
+              style="margin-top: 5px;">
+      
+               <span *ngIf="Boardofdirectors.errors.required">Ceo is Required</span>
+      
+                <span *ngIf = "Boardofdirectors.errors.minlength">
+      
+                  Mandatory!!
+      
+                </span>
+      
+              </div>
+      
+        </div>
+      
+          </div>
+          <div class="form-group">
+
+            <div class="input-group">
+          
+            <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+          
+            <input type="number" class="form-control" formControlName="listedinstockexchange" placeholder="Listedinstockexchange" required="required">
+          
+            <div class="alert alert-danger" *ngIf = "(Listedinstockexchange.touched) && (Listedinstockexchange.invalid)"
+          
+                  style="margin-top: 5px;">
+          
+                   <span *ngIf="Listedinstockexchange.errors.required">Listedinstockexchange is Required</span>
+          
+                    <span *ngIf = "Listedinstockexchange.errors.minlength">
+          
+                      Min Length Error
+          
+                    </span>
+          
+                  </div>
+          
+            </div>
+          
+              </div>
+          
+              <div class="form-group">
+
+                <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+              
+                <input type="text" class="form-control" formControlName="sector" placeholder="Sector" required="required">
+              
+                <div class="alert alert-danger" *ngIf = "(Sector.touched) && (Sector.invalid)"
+              
+                      style="margin-top: 5px;">
+              
+                       <span *ngIf="Sector.errors.required">Sector is Required</span>
+              
+                        <span *ngIf = "Sector.errors.minlength">
+              
+                          MinLength Error
+              
+                        </span>
+              
+                      </div>
+              
+                </div>
+              
+               </div>
+               <div class="form-group">
+
+                <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+              
+                <input type="text" class="form-control" formControlName="stockcode" placeholder="Stockcode" required="required">
+              
+                <div class="alert alert-danger" *ngIf = "(Stockcode.touched) && (Stockcode.invalid)"
+              
+                      style="margin-top: 5px;">
+              
+                       <span *ngIf="Stockcode.errors.required">Stockcode is Required</span>
+              
+                        <span *ngIf = "Stockcode.errors.minlength">
+              
+                          MinLength Error
+              
+                        </span>
+              
+                      </div>
+              
+                </div>
+              
+               </div>
+               <div class="form-group">
+
+                <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+              
+                <input type="text" class="form-control" formControlName="brief" placeholder="Brief" required="required">
+              
+                <div class="alert alert-danger" *ngIf = "(Brief.touched) && (Brief.invalid)"
+              
+                      style="margin-top: 5px;">
+              
+                       <span *ngIf="Brief.errors.required">Brief is Required</span>
+              
+                        <span *ngIf = "Brief.errors.minlength">
+              
+                          MinLength Error
+              
+                        </span>
+              
+                      </div>
+              
+                </div>
+              
+               </div>
+
+               <div class="form-group">
+
+                <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+              
+               </div>
+              
+              
+               <div class="form-group">
+              
+                <button type="submit" class="btn btn-primary btn-lg" [disabled]=!companysaveform.valid>ADD</button>
+              
+              
+              
+               </div>
+            
+ 
+
+  </form>
+
+
+</div>
+
+</div>
+
+
+
+
+   <div [hidden]="!submitted">
+
+    <h4>Company Regisred  SuccessFully!</h4>
+    <div class="text-center">
+     <button type="button" class="btn btn-primary" routerLink="/managecompany">Check in List</button>
+     </div>
+   
+   
+    <button (click)="companyesaveform()"></button>
+   
+    
+ </div>
+
+</body>
+
+</html>     
+<router-outlet></router-outlet>       

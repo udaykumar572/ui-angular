@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+
+
+<body>
+  
+  
+<div class="text-center" style="margin-bottom:20">
+  
+  <h1><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <i class="fa fa-bar-chart" style="font-size:60px;color:rgb(38, 218, 128)"></i><b class="text-info">STOCK MARKET</b></h1>
+    
+ </div>
+    <nav class="navbar navbar-inverse">
+      
+      <a class="navbar-brand" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5DL-T5mcYibGNDGOipN_14MYH563XyOkYLfFhpFQEgtPnARGv" alt="" height="37">
+      </a>
+    
+
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" StockMarket ></a>
+        </div>
+          <ul class="nav navbar-nav">
+            <li class="nav-item"><a routerLink="/home">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <style>
+        .navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+}
+
+        
+  </style>
+</body>
+</html>
+<router-outlet></router-outlet>

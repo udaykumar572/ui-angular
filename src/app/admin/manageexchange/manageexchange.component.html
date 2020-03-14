@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Manage Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <app-adminnavbar></app-adminnavbar>
+
+  <div class="text-right">
+  <button type="button" class="btn btn-primary" routerLink="/registernewstock">Add New Stock</button>
+  </div>
+  <h1 class="text-info" align="center">Stocks</h1>
+  <div class="panel panel-default">
+
+    <div class="panel-body">
+  
+      <table class="table table-hover table-sm" >
+        <thead class="thead-light">
+  
+            <tr>
+                <th> </th>
+              <th>Id</th>
+
+              <th>Stock Exchange</th>
+    
+              <th>Contact Address</th>
+  
+              <th>Brief<th>
+    
+              <th>Remarks</th>
+    
+    
+            </tr>
+    
+          </thead>
+  
+        <tbody>
+  
+           <tr *ngFor="let exchange of exchangeList ">
+               <td></td>
+               
+            
+  
+            <td>{{exchange.id}}</td>
+  
+            <td>{{exchange.stockexchange}}</td>
+
+            <td>{{exchange.contactaddress}}</td>
+
+            <td>{{exchange.brief}}</td>
+            <td>  </td>
+  
+            <td>{{exchange.remarks}}</td>
+            <td><button (click)="deleteExchange(exchange)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+              <button (click)="updateExchange(exchange)" class='btn btn-info'
+         
+              data-toggle="modal" data-target="#myModal">Update</button>
+         
+             </td>
+           
+           
+  
+           </tr>
+  
+        </tbody><br>
+  
+      </table>
+  
+    </div>
+  
+  </div>
+
+</body>
+</html>
+<router-outlet></router-outlet>
